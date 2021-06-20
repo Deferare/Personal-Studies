@@ -1,0 +1,42 @@
+<html>
+
+<head>
+    <style>
+        #chepesh{
+            border:5px solid red;
+            position:relative;
+        }
+        #Ubinyou{
+            border:5px solid red;
+            position:relative;
+        }
+        #Apple{
+            background-color:black;
+            color:white;
+            display:inline;
+            position:absolute;
+            left:50px;
+            top:50px;
+        }
+        
+    </style>
+</head>
+
+<body>
+  <div id = "chepesh">
+      체페시
+      <div id = "Ubinyou">
+       우빈유
+       <div id = "Apple">Apple</div>
+   </div>
+  </div>
+   
+    
+</body>
+
+</html>
+<br><br><br><br><br><br><br><br><br>
+//페어런트의 포지션이 기본상태인 스태틱인경우일때, 자식의 포지션:앱솔루트 위치값은 html을 기준으로 작동하지만,
+페어런트의 포지션이 리레이티브인 경우에는, 자식의 포지션:앱솔루트 위치값은 페어런트를 기준으로 동작한다.
++@페어런트의 자식의 자식인 경우에 두 페어런트중 포지션값이 릴레이티브인 부모를 기준으로 동작한다.
+만약, 두 페어런트 모두 포지션 값이 리레이티브인경우, 직계 부모를 기준으로 동작한다.

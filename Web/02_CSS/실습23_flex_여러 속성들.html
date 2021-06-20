@@ -1,0 +1,74 @@
+<html>
+<head>
+    <style>
+        body{
+            display:flex;
+            align-items:center;
+            justify-content:center;
+        }
+        .container{
+            display:flex;
+            flex-direction:column;
+            width:700px;
+        }
+        .Ubinyou{
+            font-weight: bold;
+            font-size: 50px;
+            text-align: center;
+            border-bottom:1px solid black;
+            padding:50px;
+        }
+        .section{
+            display:flex;
+            
+            
+        }
+        .ul{
+            padding:50px;
+            flex-shrink:0;
+            order:1
+        }
+        .main{
+            padding:50px;
+            border-left:1px solid black;
+            border-right:1px solid black;
+            order:1;
+        }
+        .aside{            
+            
+            padding:50px;
+            padding-top:70px;
+            flex-shrink:0;
+            order:1
+        }
+        .bottom{
+            text-align: center;
+            border-top:1px solid black;
+            padding-top:50px;
+        }
+        
+    </style>
+</head>
+
+<body>
+   <container class = "container">
+    <header class = "Ubinyou">
+        우빈유
+    </header>
+        
+    <section class = "section">
+        <ul class = "ul">
+            <li>one</li>
+            <li>two</li> 
+            <li>three</li>
+        </ul>
+        <main class = "main">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</main>
+        <aside class = "aside">남자</aside>
+    </section>
+    
+    <footer class = "bottom">
+        <a href = "https://www.apple.com/">홈페이지</a>
+    </footer>
+   </container>
+</body>
+</html>

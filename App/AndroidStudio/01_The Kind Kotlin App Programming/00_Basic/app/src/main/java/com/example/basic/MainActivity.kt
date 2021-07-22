@@ -13,5 +13,9 @@ class MainActivity : AppCompatActivity() {
         button.setOnClickListener {
             Toast.makeText(this, "버튼 눌림!", Toast.LENGTH_SHORT).show()
         }
+
+        input_button.setOnClickListener {
+            ouput_1.text = input_1.text.toString()
+        }
     }
 }

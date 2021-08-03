@@ -1,3 +1,5 @@
+# db 모델 클래스.
+
 from pybo import db
 
 class Question(db.Model):

@@ -8,11 +8,32 @@
 import UIKit
 import Photos
 
-class ViewController: UIViewController, UITableViewDataSource {
+class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, PHPhotoLibraryChangeObserver {
     @IBOutlet weak var tableView:UITableView!
     var fetchResult:PHFetchResult<PHAsset>!
     let imageManager = PHCachingImageManager()
     let cellIdentifier = "cell"
+    
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete{
+            let asset = self.fetchResult[indexPath[indexPath.row]]
+            PHPhotoLibrary.shared().performChanges({
+                PHAssetChangeRequest.deleteAssets([asset] as NSArray)
+            }, completionHandler: nil)
+        }
+    }
+    
+    func photoLibraryDidChange(_ changeInstance: PHChange) {
+        guard let changes = changeInstance.changeDetails(for: fetchResult)
+            else{return}
+        fetchResult = changes.fetchResultAfterChanges
+        OperationQueue.main.addOperation {
+            self.tableView.reloadSections(IndexSet(0...0), with: .automatic)
+        }
+    }
     
     func requestCollection(){
         // 카메라 롤 컬렉션 가져 옮.
@@ -65,6 +86,7 @@ class ViewController: UIViewController, UITableViewDataSource {
         default:
             print("@@@")
         }
+        PHPhotoLibrary.shared().register(self)
     }
     
     func tableView(_ tableView:UITableView, numberOfRowsInSection section:Int) -> Int{

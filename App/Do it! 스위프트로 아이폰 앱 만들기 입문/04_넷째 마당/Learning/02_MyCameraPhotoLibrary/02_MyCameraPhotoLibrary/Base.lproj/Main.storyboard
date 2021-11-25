@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="_2_MyCameraPhotoLibrary" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="pkO-ev-ZLO">
+                                <rect key="frame" x="16" y="44" width="358" height="766"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ysH-Ou-9Wv">
+                                        <rect key="frame" x="0.0" y="0.0" width="358" height="686"/>
+                                        <color key="backgroundColor" systemColor="systemGroupedBackgroundColor"/>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="NVj-cD-GU4">
+                                        <rect key="frame" x="0.0" y="686" width="358" height="40"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FtN-zF-E9N">
+                                                <rect key="frame" x="0.0" y="0.0" width="179" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="W2h-tU-lRo"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Photo Shot"/>
+                                                <connections>
+                                                    <action selector="btnCaptureImageFromCamera:" destination="BYZ-38-t0r" eventType="touchUpInside" id="L0v-eV-4PN"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ztE-fO-XEZ">
+                                                <rect key="frame" x="179" y="0.0" width="179" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="X3f-OW-iBZ"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Video Shot"/>
+                                                <connections>
+                                                    <action selector="btnRecordVideoFromCamera:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yYU-8k-XLb"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="YrB-wb-8Iw">
+                                        <rect key="frame" x="0.0" y="726" width="358" height="40"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fFh-fO-D51">
+                                                <rect key="frame" x="0.0" y="0.0" width="179" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="FfX-rw-6uj"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Photo import"/>
+                                                <connections>
+                                                    <action selector="btnLoadImageFromLibrary:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ni1-4z-Tax"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tBC-v6-3Jl">
+                                                <rect key="frame" x="179" y="0.0" width="179" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="noF-aA-JQl"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Video import"/>
+                                                <connections>
+                                                    <action selector="btnLoadVideoFromLibrary:" destination="BYZ-38-t0r" eventType="touchUpInside" id="G1u-tU-Qq5"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="pkO-ev-ZLO" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="1HY-1m-Gyg"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="pkO-ev-ZLO" secondAttribute="trailing" constant="16" id="cuX-R0-Z0c"/>
+                            <constraint firstItem="pkO-ev-ZLO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="jmC-Pa-Ds8"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="pkO-ev-ZLO" secondAttribute="bottom" id="wXs-dq-UbO"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imgView" destination="ysH-Ou-9Wv" id="Ho5-Vj-E0e"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="132" y="115"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGroupedBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

@@ -16,7 +16,7 @@ struct DetailView: View {
     var body: some View {
         List {
             Section(header: Text("Meeting Info")) {
-                NavigationLink(destination: MeetingView()) {
+                NavigationLink(destination: MeetingView(scrum: $scrum)) {
                     Label("Start Meeting", systemImage: "timer")
                         .font(.headline)
                         .foregroundColor(.accentColor)
@@ -43,6 +43,17 @@ struct DetailView: View {
                         .accessibilityValue(Text(attendee))
                 }
             }
+            Section(header: Text("History")) {
+//                if scrum.history.isEmpty {
+//                    Label("No meetings yet", systemImage: "calendar.badge.exclamationmark")
+//                }
+//                ForEach(scrum.history) { history in
+//                    HStack {
+//                        Image(systemName: "calendar")
+//                        Text(history.date, style: .date)
+//                    }
+//                }
+            }
         }
         .listStyle(InsetGroupedListStyle())
         .navigationBarItems(trailing: Button("Edit") {
@@ -58,7 +69,10 @@ struct DetailView: View {
                         isPresented = false
                     }, trailing: Button("Done") {
                         isPresented = false
-//                        scrum.update(from: data)
+                        scrum.attendees = data.attendees
+                        scrum.color = data.color
+                        scrum.title = data.title
+                        scrum.lengthInMinutes = Int(data.lengthInMinutes)
                     })
             }
         }

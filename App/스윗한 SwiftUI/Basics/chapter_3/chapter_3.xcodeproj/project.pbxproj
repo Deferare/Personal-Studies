@@ -16,6 +16,7 @@
 		5D883A4A276091C600431D34 /* MyNavigationViewStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D883A49276091C600431D34 /* MyNavigationViewStyle.swift */; };
 		5D883A4C2760941D00431D34 /* MyList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D883A4B2760941D00431D34 /* MyList.swift */; };
 		5D883A4E27609A3800431D34 /* MyGeometryReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D883A4D27609A3800431D34 /* MyGeometryReader.swift */; };
+		5DF6253B2761D2B400768529 /* MyFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF6253A2761D2B400768529 /* MyFrame.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		5D883A49276091C600431D34 /* MyNavigationViewStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyNavigationViewStyle.swift; sourceTree = "<group>"; };
 		5D883A4B2760941D00431D34 /* MyList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyList.swift; sourceTree = "<group>"; };
 		5D883A4D27609A3800431D34 /* MyGeometryReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyGeometryReader.swift; sourceTree = "<group>"; };
+		5DF6253A2761D2B400768529 /* MyFrame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFrame.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 				5D883A49276091C600431D34 /* MyNavigationViewStyle.swift */,
 				5D883A4B2760941D00431D34 /* MyList.swift */,
 				5D883A4D27609A3800431D34 /* MyGeometryReader.swift */,
+				5DF6253A2761D2B400768529 /* MyFrame.swift */,
 				5D883A392760849000431D34 /* Assets.xcassets */,
 				5D883A3B2760849000431D34 /* Preview Content */,
 			);
@@ -153,6 +156,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5D883A4E27609A3800431D34 /* MyGeometryReader.swift in Sources */,
+				5DF6253B2761D2B400768529 /* MyFrame.swift in Sources */,
 				5D883A382760849000431D34 /* ContentView.swift in Sources */,
 				5D883A362760849000431D34 /* chapter_3App.swift in Sources */,
 				5D883A4A276091C600431D34 /* MyNavigationViewStyle.swift in Sources */,

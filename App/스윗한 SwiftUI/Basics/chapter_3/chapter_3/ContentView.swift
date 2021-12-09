@@ -13,7 +13,8 @@ struct ContentView: View {
 //        MyNavigationView()
 //        MyNavigationViewStyle()
 //        MyList()
-        MyGeometryReader()
+//        MyGeometryReader()
+        MyFrame()
     }
 }
 

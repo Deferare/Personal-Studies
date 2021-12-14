@@ -9,7 +9,9 @@ import SwiftUI
 
 struct MyEnvironmentObject: View {
     var body: some View {
-        SuperView().environmentObject(User())
+        VStack(spacing: 30){
+            SuperView().environmentObject(User())
+        }
     }
 }
 
@@ -17,20 +19,24 @@ struct SuperView: View{
     var body: some View{
         VStack{
             SubView()
-            SubView()
         }
     }
 }
 
 struct SubView: View{
     @EnvironmentObject var user:User
+    @EnvironmentObject var user2:User
     var body: some View{
-        Button(action:{user.score += 1}){
-            Text(user.score.description)
+        VStack{
+            Button(action:{user.score += 1}){
+                Text(user.score.description)
+            }
+            Button(action:{user2.score += 1}){
+                Text(user.score.description)
+            }
         }
     }
 }
-
 
 struct MyEnvironmentObject_Previews: PreviewProvider {
     static var previews: some View {

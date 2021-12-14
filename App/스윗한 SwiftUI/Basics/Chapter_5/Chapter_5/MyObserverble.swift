@@ -9,9 +9,18 @@ import SwiftUI
 
 struct MyObserverble: View {
     @ObservedObject var user1 = User()
+    @ObservedObject var user2 = User()
     var body: some View {
-        Button(action: {self.user1.score += 1}){
-            Text(user1.score.description)
+        VStack(spacing:30){
+            Button(action: {self.user1.score += 1}){
+                Text(user1.score.description)
+            }
+            Button(action: {self.user2.score += 1}){
+                Text(user2.score.description)
+            }
+            Button(action: {self.user2.score += 1}){
+                Text(user2.score.description)
+            }
         }
     }
 }
@@ -21,7 +30,6 @@ struct MyObserverble_Previews: PreviewProvider {
         MyObserverble()
     }
 }
-
 
 class User: ObservableObject{
     let name = "Choco"

@@ -11,7 +11,7 @@ import SwiftUI
 struct Chapter_5App: App {
     var body: some Scene {
         WindowGroup {
-            MyStateBinding()
+            MyPresentationStyle()
         }
     }
 }

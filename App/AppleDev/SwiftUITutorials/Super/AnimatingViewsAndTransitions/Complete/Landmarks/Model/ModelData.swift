@@ -1,38 +1,37 @@
-//
-//  ModelData.swift
-//  LandMark
-//
-//  Created by Deforeturn on 12/29/21.
-//
+/*
+See LICENSE folder for this sample’s licensing information.
+
+Abstract:
+Storage for model data.
+*/
 
 import Foundation
 import Combine
 
-final class ModelData: ObservableObject{
-    @Published var landmarks:[Landmark] = load("landmarkData.json")
+final class ModelData: ObservableObject {
+    @Published var landmarks: [Landmark] = load("landmarkData.json")
     var hikes: [Hike] = load("hikeData.json")
 }
 
+func load<T: Decodable>(_ filename: String) -> T {
+    let data: Data
 
-
-func load<T:Decodable>(_ filename: String) -> T{
-    let data:Data
-    
     guard let file = Bundle.main.url(forResource: filename, withExtension: nil)
-    else{
-        fatalError("Couldn't find \(filename) in main bundle.")
+        else {
+            fatalError("Couldn't find \(filename) in main bundle.")
     }
-    
-    do{
+
+    do {
         data = try Data(contentsOf: file)
-    }catch{
+    } catch {
         fatalError("Couldn't load \(filename) from main bundle:\n\(error)")
     }
-    
-    do{
+
+    do {
         let decoder = JSONDecoder()
         return try decoder.decode(T.self, from: data)
-    }catch{
+    } catch {
         fatalError("Couldn't parse \(filename) as \(T.self):\n\(error)")
     }
 }
+

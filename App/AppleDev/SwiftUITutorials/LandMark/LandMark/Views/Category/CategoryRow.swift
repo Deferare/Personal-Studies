@@ -26,6 +26,7 @@ struct CategoryRow: View {
                             CategoryItem(landmark: landmark)
                         }
                     }
+                    .padding(.horizontal, 5)
                 }
             }
             .frame(height:185)

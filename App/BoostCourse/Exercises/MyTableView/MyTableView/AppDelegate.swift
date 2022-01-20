@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  WeatherToday
+//  MyTableView
 //
-//  Created by KANG SEUNG HOON on 2021/10/31.
+//  Created by Deforeturn on 1/20/22.
 //
 
 import UIKit

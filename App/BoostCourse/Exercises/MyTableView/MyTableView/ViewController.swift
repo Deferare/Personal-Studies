@@ -11,7 +11,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     @IBOutlet weak var myTableView:UITableView!
     let korean = ["가", "나", "다", "라", "마", "바", "아"]
-    let english = ["A", "B", "C", "D", "E", "F", "G"]
+    let english = ["A", "B", "C", "D", "E", "F", "G", "A", "B", "C", "D", "E", "F", "G", "A", "B", "C", "D", "E", "F", "G"]
     var datas:[Date] = []
     
     override func viewDidLoad() {
@@ -53,17 +53,19 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        var cell:UITableViewCell
         if indexPath.section < 2{
-            let cell: UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "myCell", for: indexPath)
+            cell = UITableViewCell()
+            cell = tableView.dequeueReusableCell(withIdentifier: "myCell", for: indexPath)
             let text = indexPath.section == 0 ? korean[indexPath.row] : english[indexPath.row]
             cell.textLabel?.text = text
-            return cell
         }else{
+            cell = CustomTableViewCell()
             let cell:CustomTableViewCell = tableView.dequeueReusableCell(withIdentifier: "myCustomCell", for: indexPath) as! CustomTableViewCell
             cell.leftLabel.text = self.dateFormatter.string(from: self.datas[indexPath.row])
             cell.rightLabel.text = self.timeFormatter.string(from: self.datas[indexPath.row])
-            return cell
         }
+        return cell
     }
     
     func tableView(_ tableView: UITableView, titleForFooterInSection section: Int) -> String? {
@@ -71,6 +73,12 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             return section == 0 ? "Korean" : "English"
         }
         return nil
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let secondViewController = segue.destination as? SecondViewController else{return}
+        guard let cell = sender as? UITableViewCell else {return}
+        secondViewController.reciveStr = cell.textLabel?.text
     }
 }
 

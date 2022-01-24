@@ -25,10 +25,8 @@ class CountrieTableViewCell: UITableViewCell {
 }
 
 class CityTableViewCell: UITableViewCell {
-    
-    @IBOutlet weak var imageViewCell:UIImageView!
     @IBOutlet weak var nameCell:UILabel!
-    @IBOutlet weak var SCCell:UILabel!
+    @IBOutlet weak var sCCell:UILabel!
     @IBOutlet weak var rainfallProbability:UILabel!
 
     override func awakeFromNib() {

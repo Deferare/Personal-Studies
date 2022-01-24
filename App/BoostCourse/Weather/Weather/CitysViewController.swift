@@ -12,7 +12,6 @@ class CitysViewController: UIViewController, UITableViewDataSource {
     let cityKey = "cityCell"
     var countrieName:String!
     
-    
     @IBOutlet weak var citysTableView:UITableView!
 
 
@@ -25,15 +24,11 @@ class CitysViewController: UIViewController, UITableViewDataSource {
         }catch{
             print(error.localizedDescription)
         }
-        
-        citysTableView.reloadData()
     }
-
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         citysTableView.reloadData()
     }
-
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.citys.count
     }
@@ -41,10 +36,11 @@ class CitysViewController: UIViewController, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = citysTableView.dequeueReusableCell(withIdentifier: cityKey, for: indexPath) as? CityTableViewCell
         let city = citys[indexPath.row]
+        print("@@@@@@@@@@@@@@@: ", city)
         cell?.nameCell.text = city.name
-        cell?.SCCell.text = "\(city.state) | \(city.celsius)"
+        cell?.sCCell.text = "\(city.state) | \(city.celsius)"
         cell?.rainfallProbability.text = String(city.rainfallProbability)
-//        cell?.imageViewCell.image = NSDataAsset(name: "cloudy")?.data as? UIImage
+
         return cell!
     }
 

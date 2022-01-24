@@ -16,7 +16,7 @@ struct City:Codable{
     let celsius:Float
     let rainfallProbability:Int
     
-    enum Codingkeys : String, CodingKey{
+    enum Codingkeys2 : String, CodingKey{
         case state, celsius
         case name = "city_name"
         case rainfallProbability = "rainfall_probability"

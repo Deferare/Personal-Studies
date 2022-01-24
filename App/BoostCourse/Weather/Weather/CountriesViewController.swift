@@ -44,10 +44,10 @@ class CountriesViewController: UIViewController, UITableViewDataSource {
     }
 
     // MARK: - Navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-         guard let citysViewController = segue.destination as? CitysViewController else {return}
-         guard let cell = sender as? CountrieTableViewCell else{return}
-         citysViewController.countrieName = cell.labelCell.text
-     }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let citysViewController = segue.destination as? CitysViewController else{return}
+        citysViewController.countrieName = "CityInfomations/kr"
+    }
+    
 }
 

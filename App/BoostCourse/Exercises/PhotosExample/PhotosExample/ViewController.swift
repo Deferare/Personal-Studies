@@ -100,7 +100,17 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
                 PHAssetChangeRequest.deleteAssets([asset] as NSArray)
             }, completionHandler: nil)
         }
-            
+    }
+    
+    @IBAction func touchUpRefreshItem(_ sender:UIBarButtonItem){
+        self.myTableView.reloadSections(IndexSet(0...0), with: .automatic)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let nextViewContrloller = segue.destination as? ImageZoomViewController else {return}
+        guard let cell = sender as? UITableViewCell else {return}
+        guard let index = self.myTableView.indexPath(for: cell) else {return}
+        nextViewContrloller.asset = self.fetchResult[index.row]
     }
     
 

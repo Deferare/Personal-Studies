@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5D1876A227AE14450016F652 /* ReminderDetailEditDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D1876A127AE14450016F652 /* ReminderDetailEditDataSource.swift */; };
 		5D60032B27AC9E3F00B55606 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D60032A27AC9E3F00B55606 /* AppDelegate.swift */; };
 		5D60032D27AC9E3F00B55606 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D60032C27AC9E3F00B55606 /* SceneDelegate.swift */; };
 		5D60032F27AC9E3F00B55606 /* ReminderListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D60032E27AC9E3F00B55606 /* ReminderListViewController.swift */; };
@@ -24,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5D1876A127AE14450016F652 /* ReminderDetailEditDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderDetailEditDataSource.swift; sourceTree = "<group>"; };
 		5D60032727AC9E3F00B55606 /* Today.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Today.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D60032A27AC9E3F00B55606 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5D60032C27AC9E3F00B55606 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -91,6 +93,7 @@
 				5D60033E27AC9F5E00B55606 /* Reminder.swift */,
 				5D60034427ACC7C800B55606 /* ReminderListDataSource.swift */,
 				5D60034927ACD18100B55606 /* ReminderdetailViewDataSource.swift */,
+				5D1876A127AE14450016F652 /* ReminderDetailEditDataSource.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -197,6 +200,7 @@
 				5D60034E27ACE64000B55606 /* EditDateCell.swift in Sources */,
 				5D60032D27AC9E3F00B55606 /* SceneDelegate.swift in Sources */,
 				5D60033F27AC9F5E00B55606 /* Reminder.swift in Sources */,
+				5D1876A227AE14450016F652 /* ReminderDetailEditDataSource.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

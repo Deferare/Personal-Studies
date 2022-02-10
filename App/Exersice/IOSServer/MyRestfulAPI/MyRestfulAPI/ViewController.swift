@@ -77,7 +77,7 @@ extension ViewController{
                     print(error.localizedDescription)
                 }
             }
-        }.resume()
+        }
     }
 }
 

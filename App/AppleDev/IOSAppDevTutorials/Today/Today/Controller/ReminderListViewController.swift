@@ -35,7 +35,9 @@ class ReminderListViewController: UITableViewController {
             guard let reminder = reminderListDataSource?.reminder(at: rowIndex) else {
                 fatalError("Couldn't find data source for reminder list.")
             }
+            print("A: ", reminder)
             destination.configure(with: reminder) { reminder in
+                print("B: ", reminder)
                 self.reminderListDataSource?.update(reminder, at: rowIndex)
                 self.tableView.reloadRows(at: [indexPath], with: .automatic)
             }

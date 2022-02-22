@@ -13,6 +13,7 @@
 		5D5316C227BE20790065C409 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D5316C027BE20790065C409 /* Main.storyboard */; };
 		5D5316C427BE207A0065C409 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D5316C327BE207A0065C409 /* Assets.xcassets */; };
 		5D5316C727BE207A0065C409 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D5316C527BE207A0065C409 /* LaunchScreen.storyboard */; };
+		5D7A1C6F27C496FE00E2004E /* OAuthSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 5D7A1C6E27C496FE00E2004E /* OAuthSwift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D7A1C6F27C496FE00E2004E /* OAuthSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +85,9 @@
 			dependencies = (
 			);
 			name = MyAPIRequest;
+			packageProductDependencies = (
+				5D7A1C6E27C496FE00E2004E /* OAuthSwift */,
+			);
 			productName = MyAPIRequest;
 			productReference = 5D5316B727BE20790065C409 /* MyAPIRequest.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +116,9 @@
 				Base,
 			);
 			mainGroup = 5D5316AE27BE20790065C409;
+			packageReferences = (
+				5D7A1C6D27C496FE00E2004E /* XCRemoteSwiftPackageReference "OAuthSwift" */,
+			);
 			productRefGroup = 5D5316B827BE20790065C409 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -358,6 +366,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		5D7A1C6D27C496FE00E2004E /* XCRemoteSwiftPackageReference "OAuthSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/OAuthSwift/OAuthSwift";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 2.2.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5D7A1C6E27C496FE00E2004E /* OAuthSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5D7A1C6D27C496FE00E2004E /* XCRemoteSwiftPackageReference "OAuthSwift" */;
+			productName = OAuthSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 5D5316AF27BE20790065C409 /* Project object */;
 }

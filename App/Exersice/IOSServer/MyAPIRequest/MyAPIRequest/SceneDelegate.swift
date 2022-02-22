@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import OAuthSwift
+
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -20,7 +22,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }
     
     func scene(_ scene: UIScene, openURLContexts URLContexts: Set<UIOpenURLContext>) {
-//        print(URLContexts)
+        guard let url = URLContexts.first?.url else {
+            return
+        }
+        if url.host == "twissue" {
+            OAuthSwift.handle(url: url)
+        }
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

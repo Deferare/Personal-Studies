@@ -37,7 +37,42 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="130.76923076923077" y="85.308056872037909"/>
+            <point key="canvasLocation" x="-172" y="85"/>
+        </scene>
+        <!--Second View Controller-->
+        <scene sceneID="jA5-R9-D6U">
+            <objects>
+                <viewController id="Zwb-LY-Icr" customClass="SecondViewController" customModule="TwitterLogin" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3Cz-N1-WMU">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="koF-tt-4NE">
+                                <rect key="frame" x="0.0" y="44" width="390" height="766"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="gqx-OE-M2U"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="koF-tt-4NE" firstAttribute="leading" secondItem="gqx-OE-M2U" secondAttribute="leading" id="05Q-kJ-bJF"/>
+                            <constraint firstItem="gqx-OE-M2U" firstAttribute="bottom" secondItem="koF-tt-4NE" secondAttribute="bottom" id="3p8-Ns-QKh"/>
+                            <constraint firstItem="koF-tt-4NE" firstAttribute="top" secondItem="gqx-OE-M2U" secondAttribute="top" id="Yz7-UW-ucq"/>
+                            <constraint firstItem="gqx-OE-M2U" firstAttribute="trailing" secondItem="koF-tt-4NE" secondAttribute="trailing" id="umX-jO-6Vc"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="kdY-CJ-qHC"/>
+                    <connections>
+                        <outlet property="webView" destination="koF-tt-4NE" id="aWY-tV-5FM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RCW-cg-XbT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="868" y="85"/>
         </scene>
     </scenes>
     <resources>

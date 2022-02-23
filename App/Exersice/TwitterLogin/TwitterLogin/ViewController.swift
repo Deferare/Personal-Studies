@@ -7,45 +7,30 @@
 
 import UIKit
 import FirebaseAuth
+import Firebase
 
-class ViewController: UIViewController {
-    
+class ViewController: UIViewController, AuthUIDelegate {
+    let provider = OAuthProvider(providerID: "twitter.com")
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        
 
+        
     }
+    
+
     @IBAction func loginBtn(_ sender:UIButton){
         print("BTN")
-        var provider = OAuthProvider(providerID: "twitter.com")
-        provider.customParameters = ["lang": "fr"]
-              
-        print(provider)
-        provider.getCredentialWith(nil) { credential, error in
-            if error != nil {
-              // Handle error.
-                print(error)
-            }
-            if credential != nil {
-                Auth.auth().signIn(with: credential!) { authResult, error in
-                    if error != nil {
-                      // Handle error.
-                        print(error)
-                    }
-                    print("Succes")
-                    print(authResult?.credential)
-                    // User is signed in.
-                    // IdP data available in authResult.additionalUserInfo.profile.
-                    // Twitter OAuth access token can also be retrieved by:
-                    // authResult.credential.accessToken
-                    // Twitter OAuth ID token can be retrieved by calling:
-                    // authResult.credential.idToken
-                    // Twitter OAuth secret can be retrieved by calling:
-                    // authResult.credential.secret
-                }
-            }
+
+        
+        provider.getCredentialWith(nil) { credent, err in
+            print(err)
+
         }
+            
+              
+
+        
     }
     
 }

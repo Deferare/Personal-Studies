@@ -6,11 +6,9 @@
 //
 
 import UIKit
-import FirebaseAuth
-import Firebase
 
 
-class SecondViewController: UIViewController, AuthUIDelegate {
+class SecondViewController: UIViewController {
 //    @IBOutlet var webView:UIWebView?
     @IBOutlet var webView:UIWebViewDelegate?
     override func viewDidLoad() {

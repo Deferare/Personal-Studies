@@ -8,14 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		5D77A01E27C5D8E60054BD71 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D77A01D27C5D8E60054BD71 /* SecondViewController.swift */; };
-		5D7B049D27C4C3FC00A2780A /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 5D7B049C27C4C3FC00A2780A /* FirebaseAuth */; };
+		5DE3F0B827CC51AE002E9598 /* OAuthSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 5DE3F0B727CC51AE002E9598 /* OAuthSwift */; };
 		5DE729D327C4BCD100D35CC5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE729D227C4BCD100D35CC5 /* AppDelegate.swift */; };
 		5DE729D527C4BCD100D35CC5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE729D427C4BCD100D35CC5 /* SceneDelegate.swift */; };
 		5DE729D727C4BCD100D35CC5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE729D627C4BCD100D35CC5 /* ViewController.swift */; };
 		5DE729DA27C4BCD100D35CC5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DE729D827C4BCD100D35CC5 /* Main.storyboard */; };
 		5DE729DC27C4BCD100D35CC5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5DE729DB27C4BCD100D35CC5 /* Assets.xcassets */; };
 		5DE729DF27C4BCD100D35CC5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DE729DD27C4BCD100D35CC5 /* LaunchScreen.storyboard */; };
-		5DE729EA27C4C16800D35CC5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5DE729E927C4C16800D35CC5 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,7 +27,6 @@
 		5DE729DB27C4BCD100D35CC5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5DE729DE27C4BCD100D35CC5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5DE729E027C4BCD100D35CC5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5DE729E927C4C16800D35CC5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,7 +34,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5D7B049D27C4C3FC00A2780A /* FirebaseAuth in Frameworks */,
+				5DE3F0B827CC51AE002E9598 /* OAuthSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,7 +60,6 @@
 		5DE729D127C4BCD100D35CC5 /* TwitterLogin */ = {
 			isa = PBXGroup;
 			children = (
-				5DE729E927C4C16800D35CC5 /* GoogleService-Info.plist */,
 				5DE729D227C4BCD100D35CC5 /* AppDelegate.swift */,
 				5DE729D427C4BCD100D35CC5 /* SceneDelegate.swift */,
 				5DE729D627C4BCD100D35CC5 /* ViewController.swift */,
@@ -92,7 +89,7 @@
 			);
 			name = TwitterLogin;
 			packageProductDependencies = (
-				5D7B049C27C4C3FC00A2780A /* FirebaseAuth */,
+				5DE3F0B727CC51AE002E9598 /* OAuthSwift */,
 			);
 			productName = TwitterLogin;
 			productReference = 5DE729CF27C4BCD100D35CC5 /* TwitterLogin.app */;
@@ -123,7 +120,7 @@
 			);
 			mainGroup = 5DE729C627C4BCD100D35CC5;
 			packageReferences = (
-				5D7B049B27C4C3FC00A2780A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				5DE3F0B627CC51AD002E9598 /* XCRemoteSwiftPackageReference "OAuthSwift" */,
 			);
 			productRefGroup = 5DE729D027C4BCD100D35CC5 /* Products */;
 			projectDirPath = "";
@@ -140,7 +137,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				5DE729DF27C4BCD100D35CC5 /* LaunchScreen.storyboard in Resources */,
-				5DE729EA27C4C16800D35CC5 /* GoogleService-Info.plist in Resources */,
 				5DE729DC27C4BCD100D35CC5 /* Assets.xcassets in Resources */,
 				5DE729DA27C4BCD100D35CC5 /* Main.storyboard in Resources */,
 			);
@@ -305,6 +301,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Y5984QYT9S;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TwitterLogin/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -332,6 +329,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Y5984QYT9S;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TwitterLogin/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -376,9 +374,9 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		5D7B049B27C4C3FC00A2780A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+		5DE3F0B627CC51AD002E9598 /* XCRemoteSwiftPackageReference "OAuthSwift" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			repositoryURL = "https://github.com/OAuthSwift/OAuthSwift";
 			requirement = {
 				branch = master;
 				kind = branch;
@@ -387,10 +385,10 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		5D7B049C27C4C3FC00A2780A /* FirebaseAuth */ = {
+		5DE3F0B727CC51AE002E9598 /* OAuthSwift */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 5D7B049B27C4C3FC00A2780A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseAuth;
+			package = 5DE3F0B627CC51AD002E9598 /* XCRemoteSwiftPackageReference "OAuthSwift" */;
+			productName = OAuthSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
